@@ -17,6 +17,30 @@ const dartService = new DartApiService(apiKey);
 const analysisService = new FinancialAnalysisService();
 const chartService = new ChartGeneratorService();
 
+// 루트 경로 - API 정보 페이지
+app.get('/', (req, res) => {
+  res.json({
+    message: 'DART Financial Analysis API Server',
+    version: '1.0.0',
+    endpoints: {
+      health: 'GET /health',
+      companies: 'GET /api/companies',
+      analyze: 'POST /api/analyze',
+      chart: 'POST /api/chart',
+      dashboard: 'POST /api/dashboard',
+      dashboardHtml: 'POST /api/dashboard/html'
+    },
+    usage: {
+      health: '서버 상태 확인',
+      companies: '분석 가능한 회사 목록 조회',
+      analyze: '재무 데이터 분석 (POST body: {corp_codes, year, report_code})',
+      chart: '특정 지표 차트 생성 (POST body: {corp_codes, year, report_code, metric})',
+      dashboard: '텍스트 대시보드 생성',
+      dashboardHtml: 'HTML 대시보드 생성'
+    }
+  });
+});
+
 // 헬스체크 엔드포인트
 app.get('/health', (req, res) => {
   res.json({ status: 'OK', message: 'DART Financial Analysis Server is running' });
