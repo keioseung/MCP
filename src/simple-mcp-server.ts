@@ -13,11 +13,6 @@ class SimpleMCPServer {
       {
         name: 'simple-test-server',
         version: '1.0.0',
-      },
-      {
-        capabilities: {
-          tools: {},
-        },
       }
     );
 
