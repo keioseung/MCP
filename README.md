@@ -2,6 +2,10 @@
 
 DART API를 활용하여 다중 기업의 재무제표 정보를 분석하고 시각화하는 Model Context Protocol (MCP) 서버입니다.
 
+<a href="https://glama.ai/mcp/servers/@keioseung/MCP">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@keioseung/MCP/badge" alt="DART 재무제표 분석 서버 MCP server" />
+</a>
+
 ## 🚀 주요 기능
 
 - **다중 기업 재무제표 분석**: 여러 기업의 재무 데이터를 동시에 분석
@@ -176,4 +180,4 @@ MIT License
 
 ## 📞 지원
 
-문제가 발생하거나 질문이 있으시면 이슈를 생성해주세요. 
+문제가 발생하거나 질문이 있으시면 이슈를 생성해주세요.
